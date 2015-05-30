@@ -73,15 +73,14 @@ class LoginPage extends Page
                         echo "</div>";
 
             echo "<div class='center'>\n";
+            echo "<div id='troger-login'>\n";
             echo "<form method='post' action='?t=Login' class='pure-form pure-form-aligned niceform'>\n";
             echo "<fieldset>
                  <div class='pure-control-group'>
-                 <label>Pseudo :</label>
-                    <input type='text' name='login' value='' placeholder='pseudo'>
+                    <input type='text' name='login' value='' placeholder='Pseudo'>
                 </div>
                  <div class='pure-control-group'>
-                 <label>Mot de passe : </label>
-                    <input type='password' name='password' value='' placeholder='mot de passe'>
+                    <input type='password' name='password' value='' placeholder='Mot de passe'>
                     </div>
                  <div class='pure-control-group'>
                     <input type='submit' class='pure-button pure-button-primary' value='Valider'>
@@ -92,6 +91,7 @@ class LoginPage extends Page
 	   
             echo " <a class='pure-button button-success' href='?t=Reg'>Créer un compte</a> ";
             echo "</fieldset></form>\n";
+            echo "</div>\n";
             echo "</div>\n";
         }
     }
