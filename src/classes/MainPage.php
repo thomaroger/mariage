@@ -87,7 +87,14 @@ class MainPage extends Page
 			new RegisterPage();
 			exit;
 		}
-		
+
+		if(CurrentUser::$account === null){
+			$page = new LoginPage();
+			$page->toHTML();
+			exit;
+		}
+
+
 		/// Check how to display current file
 		if(is_file(CurrentUser::$path)){
 			$this->image_panel			=	new ImagePanel(CurrentUser::$path);
@@ -127,16 +134,6 @@ class MainPage extends Page
 
 		echo "<div id='layout'>\n";		
 
-
-
-		// Menu left
-		echo "<div id='menu'>\n";
-		echo "<span id='rss'><a href='?t=Rss'><i class='fa fa-rss fa-lg'></i></a></span>";
-		echo "<span id='logo'>".Settings::$name."</span>\n";
-		echo "<div class='pure-menu menu pure-menu-open'>\n";
-		$this->menu->toHTML();
-		echo "</div></div>\n";
-
 		echo "<a href='#menuright' class='menuright-link'><span></span></a>";
 		// Menu right
 		echo "<div id='menuright'>";
@@ -150,9 +147,6 @@ class MainPage extends Page
 		// Main page
 		echo "<div id='page'>\n";
 
-		if(CurrentUser::$admin || CurrentUser::$uploader){
-	//		echo "<div class='bin'><img src='inc/bin.png'>".Settings::_("bin","delete")."</div>";
-		}
 
 		// ImagePanel
 		echo "<div id='image_panel' class='$this->image_panel_class'>\n";

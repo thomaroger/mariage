@@ -58,7 +58,6 @@ class Index
 			$page->toHTML();
 			return;
 		}
-
 		/// Check what to do
 		switch (CurrentUser::$action){
 

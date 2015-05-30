@@ -175,17 +175,17 @@ class CurrentUser
 
 				case "Reg"	:	if(isset($_POST['login']) && isset($_POST['password'])){
 									if(!Account::create($_POST['login'],$_POST['password'],$_POST['verif'])){
-										echo "Error creating account.";
+										echo "Erreur lors de la creation du compte";
 									}
 								}
 
 				case "Login":	if(isset($_POST['login']) && isset($_POST['password'])){
 									try{
 										if(!CurrentUser::login($_POST['login'],$_POST['password'])){
-											echo "Wrong password";
+											echo "Erreur lors de l'identification";
 										}
 									}catch(Exception $e){
-										echo "Account not found";
+										echo "Erreur lors de l'identification";
 									}
 								}
 								if(!isset(CurrentUser::$account)){
@@ -196,24 +196,22 @@ class CurrentUser
 
 				case "Logout":	if(isset($_SESSION['login'])){
 									CurrentUser::logout();
-									echo "logged out";
 								}
 								break;
 
 
 				case "Log"	:	if(isset($_SESSION['login'])){
 									CurrentUser::logout();
-									echo "logged out";
 									break;
 								}
 
 								if(isset($_POST['login']) && isset($_POST['password'])){
 									try{
 										if(!CurrentUser::login($_POST['login'],$_POST['password'])){
-											echo "Wrong password";
+											echo "Erreur lors de l'identification";
 										}
 									}catch(Exception $e){
-										echo "Account not found";
+										echo "Erreur lors de l'identification";
 									}
 								}
 

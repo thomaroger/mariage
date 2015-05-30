@@ -83,11 +83,8 @@ class RegisterPage extends Page
                 echo "<form method='post' action='?t=Reg' class='pure-form pure-form-aligned'>\n";
             echo "<div class='header'>";
 
-                if($this->admin_account){
-                    echo "<h1>".Settings::_("register","mainacc")."</h1>";						
-                }else{
-                    echo "<h1>".Settings::_("register","register")."</h1>";
-                }
+                
+            echo "<h1>Créer un compte</h1>";
             echo "</div>";
             echo "<div class='center'>\n";
 
@@ -96,33 +93,29 @@ class RegisterPage extends Page
             }
 
             echo "<fieldset>
-            <h2>".Settings::_("account","createaccount")."</h2>
                 <div class='pure-control-group'>
-                    <label>".Settings::_("register","logintxt")."</label>
-                    <input type='text' name='login' value=''>
+                    <label>Pseudo :</label>
+                    <input type='text' name='login' value='' placeholder='pseudo'>
                 </div>
             ";
 
 
             /// Password
             echo "<div class='pure-control-group'>
-                    <label>".Settings::_("register","passtxt")."</label>
-                    <input type='password' name='password' value=''>
+                    <label>Mot de passe :</label>
+                    <input type='password' name='password' value='' placeholder='mot de passe'>
                 </div>";
 
             /// Verif
             echo "<div class='pure-control-group'>
-                    <label>".Settings::_("register","veriftxt")."</label>
-                    <input type='password' name='verif' value=''>
+                    <label>Verification de votre mot de passe :</label>
+                    <input type='password' name='verif' value='' placeholder='mot de passe'>
                 </div>";
 
 
-            echo "<div class='pure-controls'><input class='pure-button button-success' type='submit' value='".Settings::_("register","submit")."'></div>";
+            echo "<div class='pure-controls'><input class='pure-button button-success' type='submit' value='Créer son compte'></div>";
+            echo " <a class='pure-button pure-button-primary' href='?t=Log'>S'identifier</a> ";
             echo "</fieldset></form>\n";
-
-            if(!$this->included){
-                echo " <a class='pure-button button-warning' href='.'>".Settings::_("register","back")."</a>";
-            }
 
         }
     }

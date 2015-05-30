@@ -202,7 +202,6 @@ class Board implements HTMLObject
 
 		if(sizeof($this->boardfolders)>0){
 			echo "<div class='section sectiondir'>";
-			echo "<h2>".Settings::_("board","albums")."</h2>";
 			echo "<div class='pure-g'>";
 			foreach($this->boardfolders as $boardfolder){
 				$boardfolder->toHTML();
@@ -214,7 +213,6 @@ class Board implements HTMLObject
 		$this->grid("Image");
 		if(sizeof($this->boarditems)>0){
 			echo "<div class='section sectionimg'>";
-			echo "<h2>".Settings::_("board","images")."</h2>";
 			echo "<div class='pure-g line'>";
 			foreach($this->boarditems as $item){
 				$item->toHTML();
@@ -228,7 +226,6 @@ class Board implements HTMLObject
 		$this->grid("Video");
 		if(sizeof($this->boarditems)>0){
 			echo "<div class='section sectionvid'>";
-			echo "<h2>".Settings::_("board","videos")."</h2>";
 			echo "<div class='pure-g'>";
 			// Output grid
 			foreach($this->boarditems as $item){

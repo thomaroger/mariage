@@ -181,33 +181,25 @@ This is the parent `<div>` that contains the menu and the content area.
     }
 
     #layout {
-        padding-left: 240px; /* left col width "#menu" */
         left: 0;
     }
 
     #menu {
-        left: 241px;
     }
 
     .menu-link {
         position: fixed;
-        left: 240px;
         display: none;
     }
 
     #layout.active .menu-link {
-        left: 240px;
     }
 
-    #page{
-        left:240px;
-    }
-
+   
     .item a{
     opacity:.7;
     }
 
     .panel > .header{
-        left: 240px !important;
     }
 }
