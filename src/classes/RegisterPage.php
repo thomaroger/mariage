@@ -76,7 +76,6 @@ class RegisterPage extends Page
             exit();
         }else{
 
-            if(!$this->included){
 
                 $this->header();
 
@@ -87,35 +86,35 @@ class RegisterPage extends Page
             echo "<h1>Créer un compte</h1>";
             echo "</div>";
             echo "<div class='center'>\n";
+            echo "<div id='troger-login'>\n";
 
-            }else{
-                echo "<form class='pure-form pure-form-aligned' method='post' action='?t=Adm&a=AAc'>\n";
-            }
+            
+                echo "<form class='pure-form pure-form-aligned niceform' method='post' action='?t=Adm&a=AAc'>\n";
 
             echo "<fieldset>
                 <div class='pure-control-group'>
-                    <label>Pseudo :</label>
-                    <input type='text' name='login' value='' placeholder='pseudo'>
+                    <input type='text' name='login' value='' placeholder='Votre pseudo'>
                 </div>
             ";
 
 
             /// Password
             echo "<div class='pure-control-group'>
-                    <label>Mot de passe :</label>
-                    <input type='password' name='password' value='' placeholder='mot de passe'>
+                    <input type='password' name='password' value='' placeholder='Votre mot de passe'>
                 </div>";
 
             /// Verif
             echo "<div class='pure-control-group'>
-                    <label>Verification de votre mot de passe :</label>
-                    <input type='password' name='verif' value='' placeholder='mot de passe'>
+                    <input type='password' name='verif' value='' placeholder='Votre mot de passe'>
                 </div>";
 
 
-            echo "<div class='pure-controls'><input class='pure-button button-success' type='submit' value='Créer son compte'></div>";
-            echo " <a class='pure-button pure-button-primary' href='?t=Log'>S'identifier</a> ";
+            echo "<input class='pure-button pure-button-primary' type='submit' value='Créer son compte'>";
             echo "</fieldset></form>\n";
+            echo " <a class='pure-button button-success' href='?t=Log'>S'identifier</a> ";
+
+            echo "</div>\n";
+
 
         }
     }
