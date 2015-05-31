@@ -79,7 +79,6 @@ class RegisterPage extends Page
 
                 $this->header();
 
-                echo "<form method='post' action='?t=Reg' class='pure-form pure-form-aligned'>\n";
             echo "<div class='header'>";
 
                 
@@ -89,7 +88,7 @@ class RegisterPage extends Page
             echo "<div id='troger-login'>\n";
 
             
-                echo "<form class='pure-form pure-form-aligned niceform' method='post' action='?t=Adm&a=AAc'>\n";
+                echo "<form class='pure-form pure-form-aligned niceform' method='post' action='?t=Reg'>\n";
 
             echo "<fieldset>
                 <div class='pure-control-group'>
@@ -105,13 +104,13 @@ class RegisterPage extends Page
 
             /// Verif
             echo "<div class='pure-control-group'>
-                    <input type='password' name='verif' value='' placeholder='Votre mot de passe'>
+                    <input type='password' name='verif' value='' placeholder='Confirmer votre mot de passe'>
                 </div>";
 
 
-            echo "<input class='pure-button pure-button-primary' type='submit' value='Créer son compte'>";
+            echo "<input class='pure-button pure-button-primary' type='submit' value='Valider'>";
             echo "</fieldset></form>\n";
-            echo " <a class='pure-button button-success' href='?t=Log'>S'identifier</a> ";
+            echo " <a class='pure-button button-success' href='?t=Log'>Vous avez déjà un compte</a> ";
 
             echo "</div>\n";
 

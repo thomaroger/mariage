@@ -89,7 +89,7 @@ class LoginPage extends Page
             </form>\n";
 
 	   
-            echo " <a class='pure-button button-success' href='?t=Reg'>Créer un compte</a> ";
+            echo " <a class='pure-button button-success' href='?t=Reg'>Vous n'avez pas de compte</a> ";
             echo "</div>\n";
             echo "</div>\n";
         }

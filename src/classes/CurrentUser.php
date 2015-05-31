@@ -175,17 +175,17 @@ class CurrentUser
 
 				case "Reg"	:	if(isset($_POST['login']) && isset($_POST['password'])){
 									if(!Account::create($_POST['login'],$_POST['password'],$_POST['verif'])){
-										echo "Erreur lors de la creation du compte";
+										echo "<div class='center danger'>Erreur lors de la creation du compte</div>";
 									}
 								}
 
 				case "Login":	if(isset($_POST['login']) && isset($_POST['password'])){
 									try{
 										if(!CurrentUser::login($_POST['login'],$_POST['password'])){
-											echo "Erreur lors de l'identification";
+											echo "<div class='center danger'>Erreur lors de l'identification</div>";
 										}
 									}catch(Exception $e){
-										echo "Erreur lors de l'identification";
+										echo "<div class='center danger'>Erreur lors de l'identification</div>";
 									}
 								}
 								if(!isset(CurrentUser::$account)){
@@ -208,10 +208,10 @@ class CurrentUser
 								if(isset($_POST['login']) && isset($_POST['password'])){
 									try{
 										if(!CurrentUser::login($_POST['login'],$_POST['password'])){
-											echo "Erreur lors de l'identification";
+											echo "<div class='center danger'>Erreur lors de l'identification</div>";
 										}
 									}catch(Exception $e){
-										echo "Erreur lors de l'identification";
+										echo "<div class='center danger'>Erreur lors de l'identification</div>";
 									}
 								}
 
