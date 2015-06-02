@@ -233,8 +233,9 @@ class Comments implements HTMLObject
 		if(isset(CurrentUser::$account)){
 			echo "<form action='?t=Com&f=".$this->webfile."' class='pure-form pure-form-stacked' id='comments_form' method='post'><fieldset class='transparent'>\n";
 			echo "<input type='hidden' name='login' id='login' value='".htmlentities(CurrentUser::$account->login, ENT_QUOTES ,'UTF-8')."' readonly>";			
-			echo "<textarea name='content' id='content' placeholder='commentaire'></textarea>\n";
-			echo "<input type='submit' class='pure-button pure-button-primary' value='Poster un commentaire'></fieldset>\n";
+			echo "<textarea name='content' id='content' placeholder='Votre commentaire'></textarea>\n";
+			echo "<br />";
+			echo "<input type='submit' id='submitcomments' class='pure-button pure-button-primary' value='Poster un commentaire'></fieldset>\n";
 			echo "</form>\n";	
 		}
 		

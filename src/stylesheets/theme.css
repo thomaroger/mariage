@@ -51,3 +51,13 @@ h3{
   	border: 1px solid transparent;
   	border-radius: 4px;
 }
+
+textarea#content {
+  margin : 0 10px;
+  width: 90%;
+}
+
+#submitcomments {
+  float: right;
+  margin-right: 10px;
+}
