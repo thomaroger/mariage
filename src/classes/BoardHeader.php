@@ -77,7 +77,7 @@ class BoardHeader{
 		echo "<a href='#menu' id='menuLink' class='menu-link'><span></span></a>";
 
 
-		echo 	"<h1>".htmlentities($this->title, ENT_QUOTES ,'UTF-8')."</h1>";
+		echo 	"<h1>".ucfirst(htmlentities($this->title, ENT_QUOTES ,'UTF-8'))."</h1>";
 
 		echo 	"</div>\n";
 	}

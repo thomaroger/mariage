@@ -59,7 +59,6 @@ abstract class Page implements HTMLObject
 			echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>\n";
 			echo "<meta name='viewport' content='width=device-width, initial-scale=1'>\n";
 			echo "<title>".Settings::$name."</title>\n";
-			echo "<meta name='author' content='Thibaud Rohmer'>\n";
 			echo "<link rel='icon' type='image/ico' href='inc/favico.ico'>";
 
 			/// CSS

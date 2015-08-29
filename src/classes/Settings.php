@@ -70,7 +70,7 @@ class Settings extends Page
 	/**** Admin Settings ****/
 
 	/// Website name
-	static public $name 		=	"PhotoShow";
+	static public $name 		=	"Aurélie & Thomas - 18 Juillet 2015";
 
 	/// Website root address
 	static public $site_address	=   "";

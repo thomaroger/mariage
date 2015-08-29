@@ -79,7 +79,7 @@ class BoardItem implements HTMLObject
 		
 		$getfile =	"t=Thb&f=$this->file";
 
-		echo "<div class='item $lgcls pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-8'>";
+		echo "<div class='item pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-3 pure-u-lg-1-4 pure-u-xl-1-8'>";
 		echo 	"<a href='?f=$this->file'>";
 		echo 	"<img src='?$getfile'>";
 		echo 	"</a>\n";

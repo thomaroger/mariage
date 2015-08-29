@@ -70,10 +70,6 @@ if (!get_magic_quotes_gpc()){
 	$_GET = protect_user_send_var($_GET);
 }
 
-if(isset($_SERVER['CONTENT_TYPE']) && $_SERVER['CONTENT_TYPE'] == 'text/xml'){
-// Nope, definitely not ready yet.
-//	new API();
-}else{
+
 	new Index();
-}
 ?>
